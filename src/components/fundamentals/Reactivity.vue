@@ -1,7 +1,5 @@
 <template>
   <div>
-    <h2>Reactivity</h2>
-
     <h3>Bad</h3>
     <p>Bad count: {{ badCount }}</p>
     <button @click="badIncrement">Bad increment</button>
@@ -11,7 +9,7 @@
     <h3>Ref</h3>
     <p>Ref count: {{ count }}</p>
     <button @click="increment">Good increment</button>
-    <button @click="count++">Good inlne increment</button>
+    <button @click="count++">Good inline increment</button>
     <button @click="decrement">Good decrement</button>
     <p>Computed is pair: {{ isPair }}</p>
     <p>Not computed is pair: {{ badIsPair }}</p>
@@ -22,6 +20,8 @@
     <p>Reactive count: {{ reactiveObject.count }}</p>
     <button @click="incrementReactive(3)">Reactive increment</button>
     <p v-show="reactiveIsPair">Reactive is pair ! <span v-if="reactiveIsPair">Yes</span></p>
+
+    <br /><br />
 
     <h3>Binding</h3>
     <input @keyup.up="text += 'up'" v-model="text" />

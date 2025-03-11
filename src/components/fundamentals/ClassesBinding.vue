@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-col gap-4">
-    <h2>Classes Binding</h2>
     <div :class="isPair ? 'bg-red-500' : 'bg-blue-500'">
       <p>Is pair: {{ isPair }} Is big: {{ isBig }}</p>
     </div>
@@ -15,6 +14,7 @@
     >
       <p>Is pair: {{ isPair }} Is big: {{ isBig }}</p>
     </div>
+
     <div :class="[isPair ? 'bg-red-500' : 'bg-blue-500', isBig ? 'text-2xl' : 'text-sm']">
       <p>Is pair: {{ isPair }} Is big: {{ isBig }}</p>
     </div>

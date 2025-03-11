@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h2>Template Syntax</h2>
     <!-- interpolation -->
     <p>Message: {{ msg }}</p>
 

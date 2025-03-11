@@ -1,84 +1,31 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterLink, RouterView, useRouter } from 'vue-router'
+
+const router = useRouter()
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <header class="flex align-center bg-blue-100 py-4 gap-8 px-4">
+    <img alt="Vue logo" class="w-8" src="@/assets/logo.svg" width="125" height="125" />
+    <span class="text-2xl">Vue Demo</span>
 
-    <div class="container mx-auto max-w-screen-lg">
-      <nav>
-        <RouterLink to="/" activeClass="text-red-500">Home</RouterLink>
-        <RouterLink to="/tutorial" activeClass="text-red-500">Tutorial</RouterLink>
-      </nav>
-    </div>
+    <nav class="flex gap-4 align-center">
+      <RouterLink
+        v-for="route in router.options.routes.filter((route) => !route.meta?.hide)"
+        :key="route.path"
+        :to="route.path"
+        active-class="text-red-800"
+      >
+        {{ route.name }}
+      </RouterLink>
+    </nav>
   </header>
 
-  <div class="flex items-center container mx-auto w-screen-lg max-w-screen-lg">
+  <main class="flex items-center container mx-auto w-screen-lg max-w-screen-lg w-full pb-8">
     <RouterView />
-  </div>
+  </main>
+
+  <footer class="flex align-center justify-center bg-blue-50 py-4 gap-4">
+    <a href="https://github.com/pacwoodson/vue-demo" target="_blank">Github</a>
+  </footer>
 </template>
-
-<style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-}
-</style>

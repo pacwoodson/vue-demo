@@ -1,15 +1,13 @@
 <template>
   <div class="w-full overflow-x-scroll max-h-screen overflow-y-scroll">
-    <h2>Code Example</h2>
-    <highlightjs langage="html" :code="source" />
+    <div v-if="name" class="text-md italic text-end pb-2 pr-2">{{ name }}</div>
+    <highlightjs autodetect :code="source" class="text-sm" />
   </div>
 </template>
 
 <script setup>
 defineProps({
-  source: {
-    type: String,
-    required: true,
-  },
+  source: String,
+  name: String,
 })
 </script>

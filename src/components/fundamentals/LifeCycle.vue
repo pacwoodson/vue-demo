@@ -1,5 +1,4 @@
 <template>
-  <h2>Life Cycle</h2>
   <p>Loaded: {{ loaded }}</p>
 </template>
 

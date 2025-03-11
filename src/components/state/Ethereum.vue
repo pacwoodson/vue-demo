@@ -1,0 +1,12 @@
+<template>
+  <div>
+    <h3>Block Number</h3>
+    <p>{{ blockNumber }}</p>
+  </div>
+</template>
+
+<script setup>
+import useEth from '@/composables/eth'
+
+const { blockNumber } = useEth()
+</script>

@@ -1,6 +1,5 @@
 <template>
   <div class="flex-grow">
-    <h2>Template Refs</h2>
     <input ref="input" />
     <button @click="focusInput">Reset & Focus Input</button>
   </div>
