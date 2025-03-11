@@ -6,7 +6,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useUsernameStore } from '@/stores/username'
 import { ref } from 'vue'
 

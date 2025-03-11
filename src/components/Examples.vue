@@ -11,7 +11,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import Example from './Example.vue'
 const props = defineProps({
   examples: Array,

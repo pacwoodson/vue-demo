@@ -26,13 +26,13 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const msg = 'Hello World'
 const inputType = 'text'
-const number = 5
+const number: number = 5
 const numbers = [1, 2, 3, 4, 5]
 
-function tripleNumber(n) {
+function tripleNumber(n: number) {
   return n * 3
 }
 </script>

@@ -2,7 +2,7 @@
   <Examples :examples="examples" />
 </template>
 
-<script setup>
+<script setup lang="ts">
 import CountComposable from '@/components/state/CountComposable.vue'
 import CountComposableComponentSource from '@/components/state/CountComposable.vue?raw'
 import CountComposableSource from '@/composables/count.ts?raw'
@@ -17,7 +17,7 @@ import EthereumComposableSource from '@/composables/eth.ts?raw'
 
 import UsernameStore from '@/components/state/UsernameStore.vue'
 import UsernameStoreComponentSource from '@/components/state/UsernameStore.vue?raw'
-import UsernameStoreSource from '@/stores/username.ts?raw'
+import UsernameStoreSource from '@/stores/username.ts?raw' with { type: 'text' }
 
 import Examples from '@/components/Examples.vue'
 

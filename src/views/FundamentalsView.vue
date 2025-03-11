@@ -1,3 +1,7 @@
+<template>
+  <Examples :examples="examples" />
+</template>
+
 <script setup lang="ts">
 import TemplateSyntax from '@/components/fundamentals/TemplateSyntax.vue'
 import TemplateSyntaxSource from '@/components/fundamentals/TemplateSyntax.vue?raw'
@@ -50,7 +54,3 @@ const examples = [
   },
 ]
 </script>
-
-<template>
-  <Examples :examples="examples" />
-</template>

@@ -25,10 +25,10 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import CodeSnippet from './CodeSnippet.vue'
 
-const props = defineProps({
+defineProps({
   name: String,
   components: Array,
   sources: Array,

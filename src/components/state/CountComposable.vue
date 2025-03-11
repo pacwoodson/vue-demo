@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { useCount } from '@/composables/count'
 
 const { count, increment } = useCount()

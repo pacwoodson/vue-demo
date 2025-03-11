@@ -29,7 +29,7 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, reactive, computed, watch } from 'vue'
 
 let badCount = 0
@@ -51,7 +51,7 @@ function decrement() {
   count.value--
 }
 
-function incrementReactive(n) {
+function incrementReactive(n: number) {
   reactiveObject.count += n
 }
 

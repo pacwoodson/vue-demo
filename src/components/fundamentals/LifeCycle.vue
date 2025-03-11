@@ -2,7 +2,7 @@
   <p>Loaded: {{ loaded }}</p>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, onBeforeMount, onBeforeUnmount, onUnmounted, ref } from 'vue'
 
 const loaded = ref(false)

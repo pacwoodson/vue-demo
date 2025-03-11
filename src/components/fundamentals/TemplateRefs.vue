@@ -5,9 +5,9 @@
   </div>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-const input = ref(null)
+<script setup lang="ts">
+import { ref, type Ref } from 'vue'
+const input = ref<null | Ref>(null)
 
 const focusInput = () => {
   input.value.value = 'reset'

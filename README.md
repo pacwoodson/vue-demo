@@ -1,6 +1,8 @@
 # vuejs-demo
 
-This template should help get you started developing with Vue 3 in Vite.
+This is an example project with a demo how to use VueJS
+
+https://vuejs-demo-three.vercel.app/
 
 ## Recommended IDE Setup
 

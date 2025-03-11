@@ -9,7 +9,7 @@
   </button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 defineProps({
   success: Boolean,
   error: Boolean,
