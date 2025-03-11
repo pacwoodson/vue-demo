@@ -18,8 +18,9 @@ import Slots from '@/components/fundamentals/Slots.vue'
 import SlotsSource from '@/components/fundamentals/Slots.vue?raw'
 import SlotSource from '@/components/fundamentals/Slot.vue?raw'
 import Examples from '@/components/Examples.vue'
+import type { ExampleProps } from '@/components/Example.vue'
 
-const examples = [
+const examples: Array<ExampleProps> = [
   {
     name: 'Template Syntax',
     components: [TemplateSyntax],

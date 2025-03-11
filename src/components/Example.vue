@@ -5,8 +5,8 @@
       <div class="w-1/2">
         <div
           class="border border-gray-300 rounded-md p-2 m-2"
-          v-for="component in components"
-          :key="component"
+          v-for="(component, index) in components"
+          :key="index"
         >
           <component :is="component" />
         </div>
@@ -27,11 +27,14 @@
 
 <script setup lang="ts">
 import CodeSnippet from './CodeSnippet.vue'
+import type { Component } from 'vue'
 
-defineProps({
-  name: String,
-  components: Array,
-  sources: Array,
-  sourcesNames: Array,
-})
+export interface ExampleProps {
+  name: string
+  components: Array<string | Component>
+  sources: Array<string>
+  sourcesNames?: Array<string>
+}
+
+defineProps<ExampleProps>()
 </script>

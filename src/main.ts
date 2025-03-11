@@ -2,7 +2,7 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import hljsVuePlugin from './highlight'
+import hljsVuePlugin from '@highlightjs/vue-plugin'
 
 import App from './App.vue'
 import router from './router'

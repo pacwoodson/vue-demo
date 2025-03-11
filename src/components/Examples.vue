@@ -12,8 +12,9 @@
 </template>
 
 <script setup lang="ts">
-import Example from './Example.vue'
-const props = defineProps({
-  examples: Array,
-})
+import Example, { type ExampleProps } from './Example.vue'
+
+defineProps<{
+  examples: Array<ExampleProps>
+}>()
 </script>
