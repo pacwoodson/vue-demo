@@ -3,7 +3,13 @@
     <h2 class="my-4">{{ name }}</h2>
     <div class="flex flex-row gap-4">
       <div class="w-1/2">
-        <component v-for="component in components" :key="component" :is="component" />
+        <div
+          class="border border-gray-300 rounded-md p-2 m-2"
+          v-for="component in components"
+          :key="component"
+        >
+          <component :is="component" />
+        </div>
       </div>
       <div class="w-1/2">
         <div class="flex flex-col gap-4">

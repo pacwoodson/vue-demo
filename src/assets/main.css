@@ -1,6 +1,12 @@
 @import 'tailwindcss';
+@import './highlight.css';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  html {
+    @apply bg-white dark:bg-black text-black dark:text-white;
+  }
   h1 {
     @apply text-4xl font-bold;
   }

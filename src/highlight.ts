@@ -1,4 +1,3 @@
-import 'highlight.js/styles/stackoverflow-light.css'
 import hljs from 'highlight.js'
 import hljsVuePlugin from '@highlightjs/vue-plugin'
 
