@@ -6,13 +6,13 @@ import { test, expect } from '@playwright/test'
 test.describe('Layout & Routing', () => {
   test('visits the app root url', async ({ page }) => {
     await page.goto('/')
-    await expect(page.locator('h1')).toHaveText('Vue Demo')
-    await expect(page.locator('h2')).toHaveText('Links to documentation')
+    await expect(page.locator('header h1')).toHaveText('Vue Demo')
+    await expect(page.locator('main h2')).toHaveText('Links to documentation')
 
-    await expect(page.locator('nav')).toHaveCount(1)
-    await expect(page.locator('nav a').first()).toHaveText('Home')
-    await expect(page.locator('nav a').first()).toHaveClass(/(^|\s)text-red-800(\s|$)/)
-    await expect(page.locator('nav a').nth(1)).not.toHaveClass(/(^|\s)text-red-800(\s|$)/)
+    await expect(page.locator('.navbar-center a').first()).toHaveText('Home')
+    await expect(page.locator('.navbar-center a').first()).toHaveClass(/(^|\s)bg-neutral(\s|$)/)
+    await expect(page.locator('.navbar-center a').nth(1)).toHaveText('Fundamentals')
+    await expect(page.locator('.navbar-center a').nth(1)).not.toHaveClass(/(^|\s)bg-neutral(\s|$)/)
 
     await expect(page.locator('header')).toHaveCount(1)
     await expect(page.locator('main')).toHaveCount(1)
@@ -21,10 +21,10 @@ test.describe('Layout & Routing', () => {
 
   test('visits the fundamentals url', async ({ page }) => {
     await page.goto('/fundamentals')
-    await expect(page.locator('h2').first()).toHaveText('Template Syntax')
+    await expect(page.locator('main h2').first()).toHaveText('Template Syntax')
 
-    await expect(page.locator('nav a').first()).not.toHaveClass(/(^|\s)text-red-800(\s|$)/)
-    await expect(page.locator('nav a').nth(1)).toHaveClass(/(^|\s)text-red-800(\s|$)/)
+    await expect(page.locator('.navbar-center a').nth(0)).not.toHaveClass(/(^|\s)bg-neutral(\s|$)/)
+    await expect(page.locator('.navbar-center a').nth(1)).toHaveClass(/(^|\s)bg-neutral(\s|$)/)
   })
 })
 

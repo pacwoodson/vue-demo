@@ -1,5 +1,5 @@
 <template>
-  <div class="border-b border-gray-200 pb-4 last:border-b-0">
+  <div class="border-b border-gray-200 last:border-b-0">
     <h2 class="my-4">{{ name }}</h2>
     <p v-if="description" class="mb-4" v-html="description" />
     <div class="flex flex-row gap-4">

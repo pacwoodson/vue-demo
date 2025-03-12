@@ -1,8 +1,8 @@
 <template>
   <div class="">
-    <p>username: {{ usernameStore.username }}</p>
-    <input v-model="username" />
-    <button @click="usernameStore.setUsername(username)">Set username</button>
+    <span>username: {{ usernameStore.username }}</span>
+    <input class="input" v-model="username" />
+    <button class="btn" @click="usernameStore.setUsername(username)">Set username</button>
   </div>
 </template>
 

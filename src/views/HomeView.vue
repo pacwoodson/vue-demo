@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>
+  <div class="prose">
     <h2 class="my-8">Links to documentation</h2>
     <div class="flex flex-col gap-4">
       <a href="https://vuejs.org/">Vue</a>
@@ -20,9 +20,3 @@
     </div>
   </div>
 </template>
-
-<style scoped>
-a {
-  color: rgb(51, 51, 225);
-}
-</style>

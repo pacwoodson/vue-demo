@@ -1,8 +1,9 @@
 <template>
   <button
+    class="btn"
     :class="{
-      'bg-green-500': success,
-      'bg-red-500': error,
+      'btn-success': success,
+      'btn-error': error,
     }"
   >
     <slot />

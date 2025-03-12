@@ -1,31 +1,18 @@
 @import 'tailwindcss';
+@plugin "@tailwindcss/typography";
+@plugin "daisyui" {
+  themes:
+    cupcake --default,
+    synthwave --prefersdark;
+}
+
 @import './highlight.css';
 
-@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+@custom-variant dark (&:where([data-theme=synthwave], [data-theme=synthwave] *));
 
 @layer base {
-  html {
-    @apply bg-white dark:bg-black text-black dark:text-white;
-  }
-  h1 {
-    @apply text-4xl font-bold;
-  }
-  h2 {
-    @apply text-2xl font-bold;
-  }
-  h3 {
-    @apply text-lg font-bold;
-  }
-  li {
-    @apply list-disc ml-4;
-  }
-  button {
-    @apply bg-blue-500 text-white p-1 m-1 rounded-md;
-  }
-  input {
-    @apply border-2 border-gray-300 p-1 m-1 rounded-md;
-  }
   code {
-    @apply text-red-800 dark:text-red-400;
+    @apply text-accent-content;
   }
 }

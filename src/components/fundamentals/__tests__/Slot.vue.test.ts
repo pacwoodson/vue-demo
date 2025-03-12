@@ -13,8 +13,8 @@ describe('Slot', () => {
     })
     const button = wrapper.find('button')
     expect(button.exists()).toBe(true)
-    expect(button.classes()).toContain('bg-green-500')
-    expect(button.classes()).not.toContain('bg-red-500')
+    expect(button.classes()).toContain('btn-success')
+    expect(button.classes()).not.toContain('btn-error')
   })
   it('renders button with red class', () => {
     const wrapper = mount(Slot, {
@@ -25,7 +25,7 @@ describe('Slot', () => {
     })
     const button = wrapper.find('button')
     expect(button.exists()).toBe(true)
-    expect(button.classes()).not.toContain('bg-green-500')
-    expect(button.classes()).toContain('bg-red-500')
+    expect(button.classes()).not.toContain('btn-success')
+    expect(button.classes()).toContain('btn-error')
   })
 })

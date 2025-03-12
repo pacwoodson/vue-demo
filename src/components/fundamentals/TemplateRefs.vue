@@ -1,7 +1,7 @@
 <template>
   <div class="flex-grow">
-    <input ref="input" />
-    <button @click="focusInput">Reset & Focus Input</button>
+    <input class="input" ref="input" />
+    <button class="btn" @click="focusInput">Reset & Focus Input</button>
   </div>
 </template>
 

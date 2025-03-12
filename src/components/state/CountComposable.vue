@@ -1,7 +1,9 @@
 <template>
   <div class="">
     <p data-testid="count-composable-count">{{ count }}</p>
-    <button @click="increment" data-testid="count-composable-increment">Increment</button>
+    <button class="btn" @click="increment" data-testid="count-composable-increment">
+      Increment
+    </button>
   </div>
 </template>
 
