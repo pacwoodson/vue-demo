@@ -4,6 +4,7 @@
       v-for="(example, index) in examples"
       :key="index"
       :name="example.name"
+      :description="example.description"
       :components="example.components"
       :sources="example.sources"
       :sources-names="example.sourcesNames"
@@ -12,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-import Example, { type ExampleProps } from './Example.vue'
+import Example, { type ExampleProps } from '@/components/Example.vue'
 
 defineProps<{
   examples: Array<ExampleProps>

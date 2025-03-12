@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
+defineProps({
   isPair: {
     type: Boolean,
     default: false,

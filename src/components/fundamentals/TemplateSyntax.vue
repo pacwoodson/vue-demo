@@ -3,9 +3,6 @@
     <!-- interpolation -->
     <p>Message: {{ msg }}</p>
 
-    <!-- binding -->
-    <input v-bind:type="inputType" :value="msg" />
-
     <!-- expressions -->
     <p>Number: {{ number }}</p>
     <p>Number * 2: {{ number * 2 }}</p>
@@ -28,7 +25,6 @@
 
 <script setup lang="ts">
 const msg = 'Hello World'
-const inputType = 'text'
 const number: number = 5
 const numbers = [1, 2, 3, 4, 5]
 

@@ -10,8 +10,8 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
-  source: String,
-  name: String,
-})
+defineProps<{
+  source: string
+  name?: string
+}>()
 </script>

@@ -1,8 +1,10 @@
 <template>
   <div class="">
-    <p>simple: {{ countStore.count }}</p>
+    <p>
+      simple: <span data-testid="count-store-count">{{ countStore.count }}</span>
+    </p>
     <p>double: {{ countStore.doubleCount }}</p>
-    <button @click="countStore.increment">Increment</button>
+    <button @click="countStore.increment" data-testid="count-store-increment">Increment</button>
   </div>
 </template>
 

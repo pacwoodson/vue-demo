@@ -25,4 +25,7 @@
   input {
     @apply border-2 border-gray-300 p-1 m-1 rounded-md;
   }
+  code {
+    @apply text-red-800 dark:text-red-400;
+  }
 }
