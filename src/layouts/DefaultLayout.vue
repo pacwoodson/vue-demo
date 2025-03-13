@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
 import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 </script>
 
 <template>
@@ -11,8 +12,6 @@ import Header from '@/components/Header.vue'
       <RouterView />
     </main>
 
-    <footer class="flex align-center justify-center bg-base-300 py-4">
-      <a href="https://github.com/pacwoodson/vue-demo" target="_blank">Github</a>
-    </footer>
+    <Footer />
   </div>
 </template>
